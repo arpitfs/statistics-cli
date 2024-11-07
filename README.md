@@ -1,3 +1,3 @@
-# connector-cli
+# statistics-cli
 
-Database connectivity cli build on .net core
+cli demo
