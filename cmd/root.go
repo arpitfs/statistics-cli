@@ -14,8 +14,8 @@ var rootCmd = &cobra.Command{
 	Short: "A CLI to generate machine statisitics",
 	Long: ` A CLI to get the cpu, memory and disk statisitcs"
 	For example:
-	statistics cpu percent
-	statistics memory `,
+	statistics -t cpu
+	statistics -t memory `,
 
 	Run: statistics,
 }
@@ -28,5 +28,5 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.Flags().StringP("type", "t", "cpu", "Provide the type of statisitcs")
+	rootCmd.Flags().StringP("type", "t", "", "Provide the type of statistics (cpu, memory, disk)")
 }
