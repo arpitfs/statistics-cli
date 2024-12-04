@@ -1,18 +1,10 @@
+/*
+Copyright © 2024 Arpit Malik amarpitmalik204@gmail.com
+*/
 package main
 
-import (
-	"fmt"
-
-	"github.com/shirou/gopsutil/v3/cpu"
-)
+import "statistics/cmd"
 
 func main() {
-	cpuInfo, _ := cpu.Info()
-	cpuPercent, _ := cpu.Percent(0, true)
-	for _, cpui := range cpuInfo {
-		fmt.Println(cpui.ModelName, cpui.Cores)
-	}
-
-	fmt.Println(cpuPercent)
-
+	cmd.Execute()
 }
